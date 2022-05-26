@@ -29,8 +29,6 @@ jobs:
           severity: error
           webhookUrl: ${{ secrets.DISCORD_WEBHOOK }}
           text: Build failed.
-      - name: test        
-        run: npm run test
       - name: deployment
         if: ${{ github.event_name == 'push' && !contains(join(github.event.commits.*.message), '#skip')}}
         uses: akhileshns/heroku-deploy@v3.12.12 # This is the action

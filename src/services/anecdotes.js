@@ -3,6 +3,11 @@ import axios from 'axios'
 
 const baseUrl = 'http://localhost:3001/anecdotes'
 
+// some crazy comments about the new awesome feature
+// just to be able to create a PR
+// some more comments
+// some ideas
+
 const getAll = async () => {
   const response = await axios.get(baseUrl)
   return response.data
